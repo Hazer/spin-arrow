@@ -33,4 +33,5 @@ PlaygroundPage.current.liveView = MyViewController()
 ```
 
 Results in:
-![Result](https://media3.giphy.com/avatars/100soft/WahNEDdlGjRZ.gif)
+
+![Result](https://raw.githubusercontent.com/rafagan/spin-arrow/master/example.gif)
