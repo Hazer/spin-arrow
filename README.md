@@ -34,4 +34,4 @@ PlaygroundPage.current.liveView = MyViewController()
 
 Results in:
 
-![Result](https://raw.githubusercontent.com/rafagan/spin-arrow/master/example.gif)
+![Result](https://raw.githubusercontent.com/rafagan/spin-arrow/master/example.gif){:height="36px" width="36px"}
