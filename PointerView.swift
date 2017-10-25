@@ -106,7 +106,7 @@ class PointerView : UIView {
         fill8Path.fill()
     }
     
-    func rotate(angle: Double, anchorPoint: CGPoint) {
+    func rotate(angle: Double) {
         self.layer.anchorPoint = CGPoint(x: 0, y: 0.5)
         self.transform = CGAffineTransform.init(rotationAngle: CGFloat(angle))
     }

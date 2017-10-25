@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'spin-arrow_Example' do
+  pod 'spin-arrow', :path => '../'
+
+  target 'spin-arrow_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
