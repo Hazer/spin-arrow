@@ -32,7 +32,7 @@ Results in:
     let pointer = PointerView()
     pointer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0)
     pointer.frame = CGRect(x: 100, y: 300, width: 200, height: 10)
-    pointer.rotate(angle: angle * Double(i), anchorPoint: CGPoint(x: 0, y: 0.5))
+    pointer.rotate(angle: angle * Double(i))
     view.addSubview(pointer)
             
     UIView.animate(withDuration: 3.0, animations: { () -> Void in
