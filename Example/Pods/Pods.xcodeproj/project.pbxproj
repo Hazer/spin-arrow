@@ -16,7 +16,7 @@
 		974E60AF374CB08EACE4A03547F7A758 /* Pods-spin-arrow_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B43B0D669317A4ECE5B844408F62A7B /* Pods-spin-arrow_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E005FD1E97AD49A74E0795912C89AFCB /* Pods-spin-arrow_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E88C29757D8696BF0E47067743D7FD37 /* Pods-spin-arrow_Tests-dummy.m */; };
 		E45BA09E45C2344687359143F0E822BB /* Pods-spin-arrow_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A2605FA9E23514AA8050455C3F7430D9 /* Pods-spin-arrow_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2551FB81FA0A71100A11B09 /* PointerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2551FB71FA0A71100A11B09 /* PointerView.swift */; };
+		F2AAA6921FB09A0600CF51CB /* PointerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AAA6911FB09A0600CF51CB /* PointerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,7 @@
 		E88C29757D8696BF0E47067743D7FD37 /* Pods-spin-arrow_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-spin-arrow_Tests-dummy.m"; sourceTree = "<group>"; };
 		ECC1B83522B1378CA0A6A2401ECBB54A /* spin-arrow-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "spin-arrow-prefix.pch"; sourceTree = "<group>"; };
 		F1A7E8BE45E56726BBBF0B4CA10C016D /* Pods-spin-arrow_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-spin-arrow_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F2551FB71FA0A71100A11B09 /* PointerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointerView.swift; sourceTree = "<group>"; };
+		F2AAA6911FB09A0600CF51CB /* PointerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointerView.swift; path = "spin-arrow/Classes/PointerView.swift"; sourceTree = "<group>"; };
 		FB040B2D23CAADEC67A074DB2F2C7CDF /* Pods-spin-arrow_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-spin-arrow_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		FB93A307550CC148ED96B3F803A44C05 /* Pods-spin-arrow_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-spin-arrow_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +95,7 @@
 		005E3E99C1E587697F42E9D52F4AC82D /* spin-arrow */ = {
 			isa = PBXGroup;
 			children = (
-				F2551FB71FA0A71100A11B09 /* PointerView.swift */,
+				F2AAA6911FB09A0600CF51CB /* PointerView.swift */,
 				045C858572829C65BE10755E4A34364F /* Support Files */,
 			);
 			name = "spin-arrow";
@@ -296,6 +296,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					4D7AAD3D76B2459212EF25BE35E81F1A = {
+						LastSwiftMigration = 0910;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -321,7 +326,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2551FB81FA0A71100A11B09 /* PointerView.swift in Sources */,
 				6374E889506CDB7169C98E586EC51391 /* spin-arrow-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2AAA6921FB09A0600CF51CB /* PointerView.swift in Sources */,
 				49527BDDAE3755BF41EEE9DA2FC6A30D /* Pods-spin-arrow_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 545AE7342059236A82BB2244276B26E2 /* Pods-spin-arrow_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -382,6 +388,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -603,6 +610,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D3A2BBDFA267454EF3E7A39884E745C /* Pods-spin-arrow_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -626,6 +634,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

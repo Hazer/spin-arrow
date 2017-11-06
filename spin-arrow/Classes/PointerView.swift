@@ -17,14 +17,15 @@ func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     return CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
 }
 
-class PointerView : UIView {
+open class PointerView : UIView {
+    
     private enum BezierStates {
         case move
         case curve
         case line
     }
     
-    override func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
         let size = CGSize(width: 94, height: 10)
@@ -106,7 +107,7 @@ class PointerView : UIView {
         fill8Path.fill()
     }
     
-    func rotate(angle: Double) {
+    open func rotate(angle: Double) {
         self.layer.anchorPoint = CGPoint(x: 0, y: 0.5)
         self.transform = CGAffineTransform.init(rotationAngle: CGFloat(angle))
     }
