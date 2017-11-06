@@ -109,6 +109,10 @@ func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     
     open func rotate(angle: Double) {
         self.layer.anchorPoint = CGPoint(x: 0, y: 0.5)
-        self.transform = CGAffineTransform.init(rotationAngle: CGFloat(angle))
+        self.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        
+        UIView.animate(withDuration: 3.0, animations: { () -> Void in
+            self.transform = self.transform.rotated(by: CGFloat(angle))
+        })
     }
 }
