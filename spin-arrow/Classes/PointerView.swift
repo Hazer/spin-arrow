@@ -93,7 +93,7 @@ func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
             
             switch action.state {
             case .move:
-                fill8Path.move(to: position - rectOffset.origin + CGPoint(x:0, y: 1000))
+                fill8Path.move(to: position - rectOffset.origin)
             case .curve:
                 fill8Path.addCurve(to: position - rectOffset.origin, controlPoint1: controlPoint1 - rectOffset.origin, controlPoint2: controlPoint2 - rectOffset.origin)
             case .line:
