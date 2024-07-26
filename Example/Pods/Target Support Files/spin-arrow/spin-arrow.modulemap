@@ -1,6 +1,0 @@
-framework module spin_arrow {
-  umbrella header "spin-arrow-umbrella.h"
-
-  export *
-  module * { export * }
-}

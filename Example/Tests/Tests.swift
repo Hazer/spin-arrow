@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import spin-arrow
+import sample
 
 class Tests: XCTestCase {
     
