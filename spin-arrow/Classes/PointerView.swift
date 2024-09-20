@@ -17,7 +17,11 @@ func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     return CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
 }
 
-@IBDesignable open class PointerView : UIView {
+@IBDesignable
+open class PointerView : UIView {
+    
+    @IBInspectable
+    public var pointerColor: UIColor = UIColor(red: 0.114, green: 0.114, blue: 0.106, alpha: 1.000)
     
     private enum BezierStates {
         case move
@@ -25,11 +29,9 @@ func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
         case line
     }
     
-    var color = UIColor(red: 0.114, green: 0.114, blue: 0.106, alpha: 1.000)
-    
     override open func draw(_ rect: CGRect) {
         //// General Declarations
-        let context = UIGraphicsGetCurrentContext()!
+        guard let context = UIGraphicsGetCurrentContext() else { return }
         let size = CGSize(width: 94, height: 10)
         let scaleX = rect.width / size.width
         let scaleY = rect.height / size.height
@@ -38,7 +40,7 @@ func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
         
         //// Color Declarations
         let fillColor = UIColor(red: 0.847, green: 0.847, blue: 0.847, alpha: 1.000)
-        let fillColor2 = color
+        let fillColor2 = pointerColor
         
         context.saveGState()
         context.setAlpha(0)
