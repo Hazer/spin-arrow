@@ -25,6 +25,8 @@ func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
         case line
     }
     
+    var color = UIColor(red: 0.114, green: 0.114, blue: 0.106, alpha: 1.000)
+    
     override open func draw(_ rect: CGRect) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
@@ -36,7 +38,7 @@ func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
         
         //// Color Declarations
         let fillColor = UIColor(red: 0.847, green: 0.847, blue: 0.847, alpha: 1.000)
-        let fillColor2 = UIColor(red: 0.114, green: 0.114, blue: 0.106, alpha: 1.000)
+        let fillColor2 = color
         
         context.saveGState()
         context.setAlpha(0)
